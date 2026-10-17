@@ -5,13 +5,10 @@
 #ifndef GLIB_WIDGET_H
 #define GLIB_WIDGET_H
 #include <string>
-
-class widget{
-public:
-    std::string Command;
-protected:
-    bool IsVisible = true;
-
-};
+    class widget {
+    public:
+        void SetText(const std::string& text);
+        std::string Command;
+    };
 
 #endif //GLIB_WIDGET_H

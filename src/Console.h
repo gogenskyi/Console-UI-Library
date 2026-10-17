@@ -1,16 +1,19 @@
 #ifndef GLIB_LIBRARY_H
 #define GLIB_LIBRARY_H
+#include <memory>
 #include <vector>
+#define DEBUG
+#include <iostream>
 
 #include "Widget/Widget.h"
 
+
 class Console {
 public:
-    bool Actual = false;
-    static void CreateApplication(const std::vector<widget> &);
+    static void CreateApplication(const std::vector<std::unique_ptr<widget>> &);
     static void UpdateState();
 private:
-    inline static std::vector<widget> context;
+    inline static std::vector<std::unique_ptr<widget>> context;
 
 };
 

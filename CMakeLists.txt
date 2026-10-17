@@ -4,7 +4,8 @@ project(Gogenskyi_CUI LANGUAGES CXX)
 add_library(Gogenskyi_CUI STATIC src/Console.cpp
         src/Widget/Widget.h
         src/Widget/TextMessage.cpp
-        src/Widget/TextMessage.h)
+        src/Widget/TextMessage.h
+        src/Widget/Colors/Colors.h)
 
 target_compile_features(Gogenskyi_CUI PUBLIC cxx_std_26)
 

@@ -1,23 +1,23 @@
 //
 // Created by Mykola on 16.10.2026.
 //
+#ifndef TEXTMESSAGE_H
+#define TEXTMESSAGE_H
 
-#ifndef GLIB_TEXTMESSAGE_H
-#define GLIB_TEXTMESSAGE_H
 
 #include <string>
 #include "Widget.h"
+#include "Colors/Colors.h"
 
 namespace Widget {
     class TextMessage : public widget {
     public:
-        explicit TextMessage(std::string message);
-
-        TextMessage(std::string &message);
+        explicit TextMessage(const std::string &message);
+        explicit TextMessage(const std::string &message,Color::COLOR);
 
     private:
-        const std::string console_message = "echo ";
+        std::string text;
     };
 }
 
-#endif //GLIB_TEXTMESSAGE_H
+#endif // TEXTMESSAGE_H
