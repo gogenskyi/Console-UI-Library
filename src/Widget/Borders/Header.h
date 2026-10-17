@@ -20,7 +20,7 @@
             this->title = title;
             line.clear();
             line += "_" + title;
-            for (auto i = 0;i < size;i++) {
+            for (auto i = 0;i < size - title.size();i++) {
                 line += '_';
             }
         }

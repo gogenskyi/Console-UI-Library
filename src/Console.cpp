@@ -12,7 +12,6 @@ void Console::CreateApplication(const std::vector<std::unique_ptr<widget>> &widg
     for (auto &el : widgets) {
         context.push_back(std::make_unique<widget>(*el));
     }
-
     UpdateState();
 }
 
@@ -20,7 +19,7 @@ void Console::UpdateState() {
     std::system("clear");
     std::cout<<frame[Border::FRAME::HEADER]->GetLine()<<std::endl;
     for (const auto &widget : context) {
-        std::cout<<frame[Border::FRAME::BORDER]->GetLine()<<'\t'<<widget->Command<<std::endl;
+        std::cout<<frame[Border::FRAME::BORDER]->GetLine()<<'\t'<<widget->Command<<"\t"<<std::endl;
     }
     std::cout<<frame[Border::FRAME::BOTTOM]->GetLine()<<std::endl;
 }
