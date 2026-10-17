@@ -7,7 +7,7 @@
 #include <vector>
 
 
-static class Color {
+class Color {
 public:
     static std::string GetColor(const int index) {
         switch (index) {

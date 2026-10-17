@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "Widget/Widget.h"
+#include "Widget/Borders/Border.h"
 
 
 class Console {
@@ -14,6 +15,7 @@ public:
     static void UpdateState();
 private:
     inline static std::vector<std::unique_ptr<widget>> context;
+    inline static std::vector<std::unique_ptr<Border>> frame;
 
 };
 

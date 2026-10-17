@@ -5,7 +5,11 @@ add_library(Gogenskyi_CUI STATIC src/Console.cpp
         src/Widget/Widget.h
         src/Widget/TextMessage.cpp
         src/Widget/TextMessage.h
-        src/Widget/Colors/Colors.h)
+        src/Widget/Colors/Colors.h
+        src/Widget/Borders/Header.h
+        src/Widget/Borders/Bottom.h
+        src/Widget/Borders/border.h
+        src/Widget/Borders/Border.h)
 
 target_compile_features(Gogenskyi_CUI PUBLIC cxx_std_26)
 
