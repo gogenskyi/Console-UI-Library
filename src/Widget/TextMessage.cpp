@@ -6,11 +6,11 @@
 
 Widget::TextMessage::TextMessage(const std::string &message) {
     text = message;
-    Command = message;}
+    Text = message;
+}
 
-Widget::TextMessage::TextMessage(const std::string &message, const Color::COLOR color)
-{
+Widget::TextMessage::TextMessage(const std::string &message, const Color::COLOR color){
     text = message;
-    Command =Color::GetColor(color) + message + "\033[0m";
+    Text =Color::GetColor(color) + message + "\033[0m";
 }
 
