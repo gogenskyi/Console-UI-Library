@@ -5,6 +5,7 @@
 #define DEBUG
 #include <iostream>
 
+#include "Widget/Button.h"
 #include "Widget/Widget.h"
 #include "Widget/Borders/Border.h"
 
@@ -14,8 +15,11 @@ public:
     static void CreateApplication(const std::string &page_name,std::vector<std::unique_ptr<widget>> &);
     static void UpdateState();
 private:
+    inline static std::vector<std::unique_ptr<widget>> buttons;
     inline static std::vector<std::unique_ptr<widget>> context;
     inline static std::vector<std::unique_ptr<Border>> frame;
+    static void ExeсuteFunc(const std::string &);
+    static std::string Input();
 protected:
     inline static std::string page_title = "Title";
 };

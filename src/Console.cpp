@@ -19,21 +19,37 @@ void Console::CreateApplication(const std::string &page_name,std::vector<std::un
 
 void Console::UpdateState() {
     std::system("clear");
-    std::vector<std::unique_ptr<widget>> Buttons;
     std::cout<<frame[Border::FRAME::HEADER]->GetLine()<<std::endl;
     for (auto &widget : context) {
         if (dynamic_cast<Widget::Button*>(widget.get())) {
-            Buttons.push_back(std::move(widget));
+            buttons.push_back(std::move(widget));
             continue;
         }
         std::cout<<frame[Border::FRAME::BORDER]->GetLine()<<'\t'<<widget->Text<<"\t"<<std::endl;
     }
     std::cout<<frame[Border::FRAME::BOTTOM]->GetLine()<<std::endl;
-    for (const auto &el : Buttons) {
+    for (const auto &el : buttons) {
         if (auto* button = dynamic_cast<Widget::Button*>(el.get())) {
             std::cout<<frame[Border::FRAME::BORDER]->GetLine()<<"  "<<button->GetCommand()<<":  "<<button->Text<<'\t';
         }
     }
     std::cout<<std::endl<<frame[Border::FRAME::BOTTOM]->GetLine()<<std::endl;
-    std::cin.get();
+    ExeсuteFunc(Input());
+}
+
+void Console::ExeсuteFunc(const std::string &input_data) {
+    for (const auto &el : buttons) {
+        if (auto* button = dynamic_cast<Widget::Button*>(el.get())) {
+            if (button->GetCommand() == input_data) {
+                auto func =button->GetFuncPtr();
+                (*func)();
+            }
+        }
+    }
+}
+
+std::string Console::Input() {
+    std::string input_data;
+    std::cin>>input_data;
+    return input_data;
 }

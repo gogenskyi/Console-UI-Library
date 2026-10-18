@@ -14,12 +14,12 @@ namespace Widget {
         std::string Command;
         std::unique_ptr<std::function<void()>> func_ptr;
     public:
+        std::unique_ptr<std::function<void()>> GetFuncPtr();
         std::string GetCommand() {
             return Command;
         }
         Button(const std::function<void()>&,std::string, const std::string &);
     };
-
 }
 
 
