@@ -11,7 +11,7 @@
 
 class Console {
 public:
-    static void CreateApplication(const std::string &page_name,const std::vector<std::unique_ptr<widget>> &);
+    static void CreateApplication(const std::string &page_name,std::vector<std::unique_ptr<widget>> &);
     static void UpdateState();
 private:
     inline static std::vector<std::unique_ptr<widget>> context;
