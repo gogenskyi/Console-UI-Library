@@ -8,7 +8,7 @@
 
 class Border {
 public:
-    inline static int Size = 15;
+    inline static int Size;
     std::string line = "|";
     enum FRAME {
         HEADER,

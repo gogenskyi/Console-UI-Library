@@ -10,9 +10,9 @@
 
     class Bottom : public Border {
     public:
-        explicit Bottom(char symbol = '_') {
+        explicit Bottom(const char symbol) {
             for (auto i = 0; i < Size;i++) {
-                line += '_';
+                line += symbol;
             }
         }
     };

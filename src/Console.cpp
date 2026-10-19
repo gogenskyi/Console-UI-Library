@@ -8,9 +8,9 @@
 void Console::CreateApplication(const std::string &page_name,std::vector<std::unique_ptr<widget>> &widgets)
 {
     page_title = page_name;
-    frame.push_back(std::make_unique<Header>(page_name,30));
+    frame.push_back(std::make_unique<Header>(page_name,50));
     frame.push_back(std::make_unique<Border>());
-    frame.push_back(std::make_unique<Bottom>('2'));
+    frame.push_back(std::make_unique<Bottom>('_'));
     for (auto &el : widgets) {
         context.push_back(std::move(el));
     }

@@ -11,8 +11,7 @@
     class Header : public Border {
         std::string title;
     public:
-        Header(const std::string &title, const int size)
-        {
+        Header(const std::string &title, const int size) {
             if (size < 15) {
                 throw std::invalid_argument("Exception: size must be at least 15");
             }
