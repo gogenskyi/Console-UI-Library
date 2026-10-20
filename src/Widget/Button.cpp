@@ -13,5 +13,5 @@ std::unique_ptr<std::function<void()>> Widget::Button::GetFuncPtr() {
 Widget::Button::Button(const std::function<void()>& func, std::string text,const std::string &Command) {
     this->Command = Command;
     func_ptr = std::make_unique<std::function<void()>>(func);
-    Text = std::move(text);
+    this->text = std::move(text);
 }

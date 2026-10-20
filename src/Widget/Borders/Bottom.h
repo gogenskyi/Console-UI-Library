@@ -15,6 +15,9 @@
                 line += symbol;
             }
         }
+        std::string GetLine() {
+            return line;
+        }
     };
 
 

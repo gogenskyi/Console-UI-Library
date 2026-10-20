@@ -23,6 +23,9 @@
                 line += '_';
             }
         }
+        std::string GetHeader() {
+
+        }
     };
 
 #endif //GOGENSKYI_CUI_HEADER_H

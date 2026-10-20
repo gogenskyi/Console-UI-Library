@@ -5,15 +5,25 @@
 #define TEXTMESSAGE_H
 
 
+#include <iostream>
 #include <string>
 #include "Widget.h"
+#include "Borders/Frame.h"
 #include "Colors/Colors.h"
+#include "src/Console.h"
 
 namespace Widget {
     class TextMessage : public widget {
     public:
         explicit TextMessage(const std::string &message);
         explicit TextMessage(const std::string &message,Color::COLOR);
+        std::string GetText() {
+            return text;
+        }
+
+        void PrintTextMessage() const {
+            std::cout<<Frame::GetFrame(Frame::BORDER)->GetLine()<<'\t'<<text<<"\t"<<std::endl;
+        }
 
     private:
         std::string text;

@@ -10,11 +10,7 @@ class Border {
 public:
     inline static int Size;
     std::string line = "|";
-    enum FRAME {
-        HEADER,
-        BORDER,
-        BOTTOM
-    };
+
     std::string GetLine() const {
         return line;
     }

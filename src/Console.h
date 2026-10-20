@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "Widget/Button.h"
+#include "Widget/TextMessage.h"
 #include "Widget/Widget.h"
 #include "Widget/Borders/Border.h"
 
@@ -16,12 +17,13 @@ public:
     static void UpdateState();
 private:
     inline static std::vector<std::unique_ptr<widget>> buttons;
+    inline static std::vector<std::unique_ptr<widget>> text_messages;
     inline static std::vector<std::unique_ptr<widget>> context;
-    inline static std::vector<std::unique_ptr<Border>> frame;
     static void ExeсuteFunc(const std::string &);
+    static void PrintButtons();
     static std::string Input();
 protected:
-    inline static std::string page_title = "Title";
+    inline static std::string page_title;
 };
 
 #endif // GLIB_LIBRARY_H
