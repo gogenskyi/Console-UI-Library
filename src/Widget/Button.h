@@ -23,7 +23,7 @@ namespace Widget {
             return Command;
         }
         void PrintButton() const {
-            std::cout<<Frame::GetFrame(Frame::BORDER)->GetLine()<<"  "<<Command<<":  "<<text<<'\t';
+            std::cout<<"|\t"<<"  "<<Command<<":  "<<text<<'\t';  // fix
         }
         Button(const std::function<void()>&,std::string, const std::string &);
     };

@@ -7,25 +7,31 @@
 #include <memory>
 #include <vector>
 
-#include "Border.h"
+
+class Frame;
 
 class Frame {
 public:
-    inline static std::vector<std::unique_ptr<Border>> frame;
-    enum FRAME {
-        HEADER,
-        BORDER,
-        BOTTOM
-    };
-    static std::unique_ptr<Border> GetFrame(const FRAME f) {
-        // refactor all borders
-        switch (f) {
-            case HEADER: return std::move(frame[HEADER]);
-            case BORDER: return std::move(frame[BORDER]);
-            case BOTTOM: return std::move(frame[BOTTOM]);
+    std::string line;
+    // static std::vector<std::unique_ptr<Frame>> frame;
+    inline static int Size;
+    // enum FRAME {
+    //     HEADER,
+    //     BORDER,
+    //     BOTTOM
+    // };
+    // static std::unique_ptr<Frame> GetFrame(const FRAME f) {
+    //     switch (f) {
+    //         case HEADER: return std::move(frame[HEADER]);
+    //         case BORDER: return std::move(frame[BORDER]);
+    //         case BOTTOM: return std::move(frame[BOTTOM]);
+    //
+    //     }
+    //     return std::move(frame[BORDER]);
+    // }
 
-        }
-        return std::move(frame[BORDER]);
+    std::string GetLine() const {
+        return line;
     }
 };
 

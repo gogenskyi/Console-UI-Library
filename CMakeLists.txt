@@ -12,7 +12,8 @@ add_library(Gogenskyi_CUI STATIC src/Console.cpp
         src/Widget/Borders/Border.h
         src/Widget/Button.cpp
         src/Widget/Button.h
-        src/Widget/Borders/frame.h)
+        src/Widget/Borders/frame.h
+        src/Widget/Borders/Frames.h)
 
 target_compile_features(Gogenskyi_CUI PUBLIC cxx_std_26)
 

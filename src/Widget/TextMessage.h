@@ -9,6 +9,7 @@
 #include <string>
 #include "Widget.h"
 #include "Borders/Frame.h"
+#include "Borders/Frames.h"
 #include "Colors/Colors.h"
 #include "src/Console.h"
 
@@ -22,7 +23,7 @@ namespace Widget {
         }
 
         void PrintTextMessage() const {
-            std::cout<<Frame::GetFrame(Frame::BORDER)->GetLine()<<'\t'<<text<<"\t"<<std::endl;
+            std::cout<<GetFrame(BORDER).get()<<'\t'<<text<<"\t"<<std::endl;
         }
 
     private:

@@ -8,7 +8,7 @@
 
 #include "Border.h"
 
-    class Header : public Border {
+    class Header : public Frame {
         std::string title;
     public:
         Header(const std::string &title, const int size) {
@@ -22,9 +22,6 @@
             for (auto i = 0;i < size - title.size();i++) {
                 line += '_';
             }
-        }
-        std::string GetHeader() {
-
         }
     };
 

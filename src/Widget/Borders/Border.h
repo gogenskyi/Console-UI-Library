@@ -4,16 +4,15 @@
 
 #ifndef GOGENSKYI_CUI_BORDER_H
 #define GOGENSKYI_CUI_BORDER_H
+#include "Frame.h"
+#include "../Gogenskyi_CUI/src/Widget/Borders/Frame.h"
 
-
-class Border {
+class Border : public Frame  {
 public:
-    inline static int Size;
-    std::string line = "|";
-
-    std::string GetLine() const {
-        return line;
+    explicit Border(const std::string &line) {
+        this->line = line;
     }
+    std::string line;
 };
 
 

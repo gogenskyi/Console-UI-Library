@@ -8,7 +8,7 @@
 
 #include "Header.h"
 
-    class Bottom : public Border {
+    class Bottom : public Frame {
     public:
         explicit Bottom(const char symbol) {
             for (auto i = 0; i < Size;i++) {
