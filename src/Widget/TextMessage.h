@@ -23,7 +23,7 @@ namespace Widget {
         }
 
         void PrintTextMessage() const {
-            std::cout<<GetFrame(BORDER).get()<<'\t'<<text<<"\t"<<std::endl;
+            std::cout<<GetFrame(BORDER)->GetLine()<<'\t'<<text<<"\t"<<std::endl;
         }
 
     private:

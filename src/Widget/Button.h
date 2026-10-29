@@ -9,8 +9,6 @@
 #include <memory>
 
 #include "Widget.h"
-#include "Borders/Frame.h"
-#include "src/Console.h"
 
 namespace Widget {
     class Button : public widget {
